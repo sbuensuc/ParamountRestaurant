@@ -4,19 +4,22 @@
     ViewBag.Title = "Index";
 }
 <div>
-    <h2>Menu</h2>
+    <h1>Menu</h1>
 </div>
 <div class="topdiv"></div>
-<h3>APPETIZERS</h3>
+<h3>Appetizers</h3>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
             @foreach (FoodItem item in Model)
             {
+                string imagepath = item.FoodId + ".png";
                 if (item.Type == "Appetizer")
                 {
                 <div class="row ">
-                    <div class="picdiv col-md-2"></div>
+                    <div class="picdiv col-md-2">
+                        <a href="@Url.Action("Index", "Menu") " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
+                    </div>
                     <div class="col-md-8">
                         <div class="itemname">
                             @Html.ActionLink(item.Name, "Details", new { fooditem = item.Name })
@@ -26,7 +29,7 @@
                         </div>
                     </div>
                     <div class="pricediv col-md-1 fill">
-                        @item.Price
+                        $@item.Price
                 </div>
             </div>
                     }
@@ -36,16 +39,19 @@
         </div>
     </div>
 </div>
-<h3>ENTREES</h3>
+<h3>Entrees</h3>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
             @foreach (FoodItem item in Model)
             {
-                if (item.Type == "Appetizer")
+                string imagepath = item.FoodId + ".png";
+                if (item.Type == "Entree")
                 {
                     <div class="row ">
-                        <div class="picdiv col-md-2"></div>
+                        <div class="picdiv col-md-2">
+                            <a href="@Url.Action("Index", "Menu") " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
+                        </div>
                         <div class="col-md-8">
                             <div class="itemname">
                                 @Html.ActionLink(item.Name, "Details", new { fooditem = item.Name })
@@ -55,7 +61,7 @@
                             </div>
                         </div>
                         <div class="pricediv col-md-1 fill">
-                            @item.Price
+                            $@item.Price
                         </div>
                     </div>
                 }
@@ -65,16 +71,19 @@
         </div>
     </div>
 </div>
-<h3>DESSERTS</h3>
+<h3>Desserts</h3>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
             @foreach (FoodItem item in Model)
-            {
-                if (item.Type == "Appetizer")
-                {
+                        {
+                            string imagepath = item.FoodId + ".png";
+                            if (item.Type == "Dessert")
+                            {
                     <div class="row ">
-                        <div class="picdiv col-md-2"></div>
+                        <div class="picdiv col-md-2">
+                            <a href="@Url.Action("Index", "Menu") " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
+                        </div>
                         <div class="col-md-8">
                             <div class="itemname">
                                 @Html.ActionLink(item.Name, "Details", new { fooditem = item.Name })
@@ -84,7 +93,7 @@
                             </div>
                         </div>
                         <div class="pricediv col-md-1 fill">
-                            @item.Price
+                            $@item.Price
                         </div>
                     </div>
                 }
@@ -94,5 +103,5 @@
         </div>
     </div>
 </div>
-<div class="topdiv"></div>
+<div class="botdiv"></div>
 
