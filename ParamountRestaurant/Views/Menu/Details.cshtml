@@ -1,7 +1,24 @@
-﻿
+﻿@model ParamountRestaurant.Models.FoodItem
 @{
     ViewBag.Title = "Details";
+    string imagepath = Model.FoodId + ".png";
 }
 
-<h2>Details</h2>
+
+<h1>@Model.Name</h1>
+<div class="topdiv"></div>
+<div class="details">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <a href="@Url.Action("Index", "Menu") "><img src="~/Assets/images/@(imagepath)" /></a>
+    </div>
+    </div>
+    <div class="row descriptDetails">
+        <div>
+            @Model.Description
+            <br />
+            <h6>(click image to return to menu)</h6>
+        </div>
+    </div>
+</div>
 

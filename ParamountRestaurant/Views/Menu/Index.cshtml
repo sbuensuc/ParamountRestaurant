@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="itemname">
-                            @Html.ActionLink(item.Name, "Details", new { fooditem = item.Name })
+                            @Html.ActionLink(item.Name, "Details", new { id = item.FoodId })
                         </div>
                         <div class="descript">
                             @item.Description
@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="itemname">
-                                @Html.ActionLink(item.Name, "Details", new { fooditem = item.Name })
+                                @Html.ActionLink(item.Name, "Details", new { id = item.FoodId })
                             </div>
                             <div class="descript">
                                 @item.Description
@@ -86,7 +86,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="itemname">
-                                @Html.ActionLink(item.Name, "Details", new { fooditem = item.Name })
+                                @Html.ActionLink(item.Name, "Details", new { id = item.FoodId })
                             </div>
                             <div class="descript">
                                 @item.Description
