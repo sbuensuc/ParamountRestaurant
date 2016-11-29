@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image:url(/Assets/Images/restaurantbg.png);
+    background-size:100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +23,56 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/*Custom Css*/
+
+#topbar img {
+    height: 100%;
+    width: auto;
+}
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+#body_container{
+    height:100%; /* force the BODY element to match the height of the HTML element */
+    
+}
+#cloud-container{
+    
+    background-color: white;
+}
+
+#home_header img {
+    width: 100%;
+}
+
+.topdiv{
+    background-color: orange;
+    height: 20px;
+}
+.gallery_container {
+    margin-top: 10px;
+}
+
+.sidebar {
+    background-color: darkslategrey;
+    color: white;
+    padding: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.sidebar img {
+    width: 100%;
+    height: auto;
+
+}
+
+.sidebarinner {
+    text-align:center;
+    margin-bottom: 10px;
+    
 }
