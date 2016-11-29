@@ -1,4 +1,9 @@
-﻿//Custom JS code
+﻿//Filename: custom.js
+//Author Name: Sam Buensuceso
+//Website Name: http://paramount-bistro.azurewebsites.net/
+//File Description: custom js 
+
+//Custom JS code
 
 //JS to handle image modal
 $(function () {

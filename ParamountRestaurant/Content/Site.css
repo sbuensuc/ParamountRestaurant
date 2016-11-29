@@ -1,4 +1,9 @@
-﻿body {
+﻿/*Filename: site.css
+Author Name: Sam Buensuceso
+Website Name: http://paramount-bistro.azurewebsites.net/
+File Description: custom css*/ 
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
     background-image:url(/Assets/Images/restaurantbg.png);
