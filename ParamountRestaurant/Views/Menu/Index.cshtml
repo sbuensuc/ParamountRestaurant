@@ -1,9 +1,98 @@
-﻿
+﻿@using ParamountRestaurant.Models
+@model IEnumerable<FoodItem>
 @{
     ViewBag.Title = "Index";
 }
 <div>
     <h2>Menu</h2>
-    <h4>We welcome you to Paramount Bistro, come try it for yourself!</h4>
 </div>
+<div class="topdiv"></div>
+<h3>APPETIZERS</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            @foreach (FoodItem item in Model)
+            {
+                if (item.Type == "Appetizer")
+                {
+                <div class="row ">
+                    <div class="picdiv col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="itemname">
+                            @Html.ActionLink(item.Name, "Details", new { fooditem = item.Name })
+                        </div>
+                        <div class="descript">
+                            @item.Description
+                        </div>
+                    </div>
+                    <div class="pricediv col-md-1 fill">
+                        @item.Price
+                </div>
+            </div>
+                    }
+                }
+
+
+        </div>
+    </div>
+</div>
+<h3>ENTREES</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            @foreach (FoodItem item in Model)
+            {
+                if (item.Type == "Appetizer")
+                {
+                    <div class="row ">
+                        <div class="picdiv col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="itemname">
+                                @Html.ActionLink(item.Name, "Details", new { fooditem = item.Name })
+                            </div>
+                            <div class="descript">
+                                @item.Description
+                            </div>
+                        </div>
+                        <div class="pricediv col-md-1 fill">
+                            @item.Price
+                        </div>
+                    </div>
+                }
+            }
+
+
+        </div>
+    </div>
+</div>
+<h3>DESSERTS</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            @foreach (FoodItem item in Model)
+            {
+                if (item.Type == "Appetizer")
+                {
+                    <div class="row ">
+                        <div class="picdiv col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="itemname">
+                                @Html.ActionLink(item.Name, "Details", new { fooditem = item.Name })
+                            </div>
+                            <div class="descript">
+                                @item.Description
+                            </div>
+                        </div>
+                        <div class="pricediv col-md-1 fill">
+                            @item.Price
+                        </div>
+                    </div>
+                }
+            }
+
+
+        </div>
+    </div>
+</div>
+<div class="topdiv"></div>
 

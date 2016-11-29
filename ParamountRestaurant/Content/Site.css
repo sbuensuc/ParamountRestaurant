@@ -76,3 +76,38 @@ html{
     margin-bottom: 10px;
     
 }
+
+.itemname {
+    background-color:dimgrey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:10px;
+    color:white;
+    font-family: 'Century Gothic';
+}
+
+.descript {
+    background-color: darkslategrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:10px;
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pricediv {
+    margin-left:1px;
+    background-color:dimgrey;
+    
+
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+.row{
+    overflow: hidden; 
+}
+
