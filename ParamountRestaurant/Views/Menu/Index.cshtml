@@ -21,7 +21,7 @@
                 {
                 <div class="row ">
                     <div class="picdiv col-md-2">
-                        <a href="@Url.Action("Index", "Menu") " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
+                        <a href="@Url.Action("Details", "Menu",  new { id = item.FoodId }) " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
                     </div>
                     <div class="col-md-8">
                         <div class="itemname">
